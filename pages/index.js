@@ -4,10 +4,19 @@ import PropertyList from '../components/PropertyList';
 import Filters from '../components/Filters';
 import Cart from '../components/Cart';
 import { properties } from '../utils/data';
+import { useSession , signIn} from 'next-auth/react'
 
 export default function Home() {
   const [filteredProperties, setFilteredProperties] = useState(properties);
   const [cart, setCart] = useState([]);
+  const session=useSession();
+  console.log('session:',session);
+
+
+
+ if(session.status==='unauthenticated'){
+  return <button onClick={signIn}>Login</button>
+ }
 
   const addToCart = (property) => {
     setCart([...cart, { ...property, quantity: 1 }]);
