@@ -6,7 +6,6 @@ export default function Checkout() {
   const [orderPlaced, setOrderPlaced] = useState(false);
 
   const handleCheckout = (formData) => {
-  
     console.log('Order placed:', formData);
     setOrderPlaced(true);
   };
