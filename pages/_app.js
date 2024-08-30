@@ -9,7 +9,7 @@ import {
 
 
 function MyApp({ Component, pageProps }) {
-  const publishableKey= process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
+  const publishableKey= 'pk_test_bGFyZ2UtZ2hvdWwtOTEuY2xlcmsuYWNjb3VudHMuZGV2JA';
   return (
     <ClerkProvider publishableKey={publishableKey}>
     <SignedOut>
