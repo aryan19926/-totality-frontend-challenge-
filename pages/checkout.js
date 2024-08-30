@@ -6,7 +6,7 @@ export default function Checkout() {
   const [orderPlaced, setOrderPlaced] = useState(false);
 
   const handleCheckout = (formData) => {
-    // Here you would typically send the form data to your backend
+  
     console.log('Order placed:', formData);
     setOrderPlaced(true);
   };
@@ -17,7 +17,7 @@ export default function Checkout() {
         <h1 className="text-3xl font-bold my-8">Checkout</h1>
         {orderPlaced ? (
           <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-            Thank you for your order! We'll be in touch soon.
+            Thank you for your order! We&apos;ll be in touch soon.
           </div>
         ) : (
           <CheckoutForm onSubmit={handleCheckout} />
