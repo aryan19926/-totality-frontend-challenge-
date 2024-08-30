@@ -9,8 +9,9 @@ import {
 
 
 function MyApp({ Component, pageProps }) {
+  const publishableKey= process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY;
   return (
-    <ClerkProvider>
+    <ClerkProvider publishableKey={publishableKey}>
     <SignedOut>
       <SignInButton />
     </SignedOut>
